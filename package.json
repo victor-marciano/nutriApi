@@ -1,0 +1,30 @@
+{
+    "name": "nutri-api",
+    "version": "1.0.0",
+    "main": "server.js",
+    "repository": "https://github.com/victor-marciano/nutriApi",
+    "author": "victor-marciano <vpm.marciano@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "yarn build && node ./dist/src/server.js",
+        "dev": "nodemon --exec sucrase-node ./src/server.js",
+        "mount": "rm -r ./dist && mkdir dist",
+        "build": "yarn mount && babel src --out-dir dist"
+    },
+    "devDependencies": {
+        "eslint": "^7.4.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "prettier": "^2.0.5",
+        "sucrase": "^3.15.0"
+    },
+    "dependencies": {
+        "@babel/cli": "^7.10.4",
+        "@babel/core": "^7.10.4",
+        "@babel/preset-env": "^7.10.4",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1"
+    }
+}
